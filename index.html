@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice Calculator Tool</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="neon-title">Monthly Practice Calculator</h2>
+    <label>kWh Used:</label>
+    <div id="kWh-used">---</div> <!-- Placeholder for kWh used -->
+    <label>Days:</label>
+    <div id="days-passed">---</div> <!-- Placeholder for days passed -->
+    <button onclick="generateRandomValues()">Generate</button>
+    <label for="unit-rate">Unit Rate:</label>
+    <div class="input-container">
+      <input type="number" id="unit-rate" min="0" step="0.01" placeholder="e.g., 0.32" required>
+    </div>
+    <label for="standing-charge">Standing Charge:</label>
+    <div class="input-container">
+      <input type="number" id="standing-charge" min="0" step="0.01" placeholder="e.g., 0.50" required>
+    </div>
+    <button onclick="calculateTotalBill()">Calculate</button>
+    <div id="error-message"></div>
+    <div id="result"></div>
+  </div>
+
+  <div class="container">
+    <h2 class="neon-title">Annual Practice Calculator</h2>
+    <label>kWh Used:</label>
+    <div id="annual-kWh-used">---</div> <!-- Placeholder for kWh used -->
+    <label>Days:</label>
+    <div id="annual-days-passed">365</div> <!-- Placeholder for days passed -->
+    <button onclick="generateAnnualRandomValues()">Generate</button>
+    <label for="annual-unit-rate">Unit Rate:</label>
+    <div class="input-container">
+      <input type="number" id="annual-unit-rate" min="0" step="0.01" placeholder="e.g., 0.32" required>
+    </div>
+    <label for="annual-standing-charge">Standing Charge:</label>
+    <div class="input-container">
+      <input type="number" id="annual-standing-charge" min="0" step="0.01" placeholder="e.g., 0.50" required>
+    </div>
+    <button onclick="calculateAnnualTotalBill()">Calculate</button>
+    <div id="annual-error-message"></div>
+    <div id="annual-result"></div>
+  </div>
+
+  <div class="info-tooltip">
+    <span class="info-text">ℹ</span>
+    <span class="tooltip-text">This practice tool was created by Ginny. If you have any feedback, suggestions, or found a bug, please contact me on slack. Thanks, Ginny G</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
